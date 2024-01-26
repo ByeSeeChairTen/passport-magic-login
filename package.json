@@ -27,9 +27,9 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "passport-magic-login",
+  "name": "@bsct/passport-magic-login",
   "description": "Passwordless authentication with magic links for Passport.js 🔑",
-  "author": "Max Stoiber",
+  "author": "Oscar Vale",
   "module": "dist/passport-magic-login.esm.js",
   "size-limit": [
     {
