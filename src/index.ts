@@ -83,6 +83,8 @@ class MagicLoginStrategy {
       res.status(400).send('Please specify the destination.');
       return;
     }
+    
+    const target = payload.target || undefined;
 
     const code = Math.floor(Math.random() * 90000) + 10000 + '';
     const jwt = generateToken(
@@ -97,7 +99,7 @@ class MagicLoginStrategy {
     this._options
       .sendMagicLink(
         payload.destination,
-        `${this._options.callbackUrl}?token=${jwt}`,
+        `${this._options.callbackUrl}?token=${jwt}${target ? `&target=${target}` : ''}`,
         code,
         req
       )
